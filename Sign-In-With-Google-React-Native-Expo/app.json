@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "google-sign-in",
+    "slug": "hiekart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shipsar.hiekart"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.shipsar.hiekart"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "shipsar-hiekart",
+    "extra": {
+      "eas": {
+        "projectId": "671965c1-d4ec-4a69-a278-98916a4679ed"
+      }
+    }
+  }
+}
