@@ -4,11 +4,13 @@ import VideoList from "./VideoList";
 
 const App = () => {
   const [videos, setVideos] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState({
+    url: "tom-jerry/001-Puss-Gets-the-Boot.avi",
+  });
 
   useEffect(() => {
     // Fetch video data from server API endpoint
-    fetch("/api/videoslist") // Replace `/api/videos` with your actual API endpoint
+    fetch("http://localhost:3000/api/play/tom-jerry/001-Puss-Gets-the-Boot.avi") // Replace `/api/videos` with your actual API endpoint
       .then((response) => response.json())
       .then((data) => setVideos(data))
       .catch((error) => console.error(error));
@@ -21,7 +23,7 @@ const App = () => {
   return (
     <div className="App">
       <VideoList videos={videos} onVideoClick={handleVideoClick} />
-      {selectedVideo && <VideoPlayer videoSrc={selectedVideo.url} />}
+      {selectedVideo && <VideoPlayer videoId={selectedVideo.url} />}
       <div>
         <h2>Copyright by Shipsar Developers</h2>
       </div>
